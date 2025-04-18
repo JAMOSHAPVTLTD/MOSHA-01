@@ -1,6 +1,4 @@
-<!-- Paste this updated code into your index.html -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,117 +7,173 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(to bottom, #1b5e20, #33691e);
       color: white;
       text-align: center;
-    }
+    }.overlay {
+  padding: 40px 20px;
+}
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
+header img {
+  width: 80px;
+}
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
-    }
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
 
-    h2 {
-      margin: 0.2em 0;
-      font-weight: normal;
-    }
+h2 {
+  margin: 0.2em 0;
+  font-weight: normal;
+}
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
-    }
+.languages {
+  margin-top: 20px;
+}
 
-    .product {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 20px;
-      width: 280px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    }
+.languages button {
+  margin: 0 10px;
+  padding: 5px 15px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: #ff9800;
+  color: white;
+}
 
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.languages button:hover {
+  background: #e68900;
+}
 
-    .product h3 {
-      margin-top: 15px;
-      font-size: 1.4em;
-      color: #ff9800;
-    }
+.product-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
 
-    .product p {
-      font-size: 0.95em;
-      margin: 10px 0;
-    }
+.product {
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  width: 250px;
+}
 
-    .price {
-      font-weight: bold;
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
+.product img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
 
-    .btn {
-      margin-top: 10px;
-      padding: 10px 20px;
-      font-size: 1em;
-      background: #ff9800;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
+.price {
+  font-size: 1.3em;
+  margin-top: 10px;
+}
 
-    .btn:hover {
-      background: #e68900;
-    }
+.desc {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
 
-    .footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #ccc;
-    }
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.available {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 1em;
+}
+
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>JA MOSHA AGARBATTI</h1>
-    <h2>100% Natural Mosquito Repellent Incense Sticks</h2>
+    <header>
+      <img src="logo.png" alt="Ja Mosha Logo" />
+      <h1>JA MOSHA AGARBATTI</h1>
+      <h2>100% Natural Mosquito Repellent Incense Sticks</h2>
+    </header><div class="languages">
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('hi')">हिन्दी</button>
+  <button onclick="setLang('bn')">বাংলা</button>
+  <button onclick="setLang('kn')">ಕನ್ನಡ</button>
+</div>
 
-    <div class="products">
-      <div class="product">
-        <img src="p1.jpg" alt="Ja Mosha Pouch Pack"/>
-        <h3>P1 – Pouch Pack</h3>
-        <p>A compact mosquito repellent incense stick pack, perfect for daily home use.</p>
-        <p class="price">₹10 | 12 Sticks</p>
-        <a href="https://wa.me/918439021253?text=I%20want%20to%20order%20P1%20Ja%20Mosha%20Agarbatti" class="btn">Order P1</a>
-      </div>
-
-      <div class="product">
-        <img src="p2.jpg" alt="Ja Mosha Box Pack"/>
-        <h3>P2 – Box Pack</h3>
-        <p>Premium box with natural mosquito protection. Safe for all, indoor/outdoor use.</p>
-        <p class="price">₹30 | 30 Sticks</p>
-        <a href="https://wa.me/918439021253?text=I%20want%20to%20order%20P2%20Ja%20Mosha%20Agarbatti" class="btn">Order P2</a>
-      </div>
-    </div>
-
-    <div class="footer">
-      Made with love in India | Contact: 8439021253
-    </div>
+<div class="product-section">
+  <div class="product">
+    <img src="p1.png" alt="Product P1">
+    <h3>P1 Agarbatti</h3>
+    <p class="desc">Blended with natural oils, this incense stick helps repel mosquitoes while giving a calming aroma.</p>
+    <p class="price">₹10 | 12 Sticks</p>
+    <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20P1%20Agarbatti" class="btn">Order Now</a>
   </div>
-</body>
+
+  <div class="product">
+    <img src="p2.png" alt="Product P2">
+    <h3>P2 Agarbatti</h3>
+    <p class="desc">Crafted with herbal extracts, P2 is perfect for peaceful evenings, naturally driving away mosquitoes.</p>
+    <p class="price">₹10 | 12 Sticks</p>
+    <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20P2%20Agarbatti" class="btn">Order Now</a>
+  </div>
+</div>
+
+<div class="available">Available on Flipkart & Amazon</div>
+
+<div class="footer">
+  Made with love in India | Contact: Coming Soon...<br>
+  Address: 35, Guttahalli, Dattatreya Temple Street, Palace Guttahalli Main Road, 8th Cross, Malleshwaram, Bengaluru, Karnataka 560003
+</div>
+
+  </div>  <script>
+    const texts = {
+      en: {
+        title: "JA MOSHA AGARBATTI",
+        desc: "100% Natural Mosquito Repellent Incense Sticks",
+        order: "Order Now"
+      },
+      hi: {
+        title: "जा मोशा अगरबत्ती",
+        desc: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
+        order: "अब ऑर्डर करें"
+      },
+      bn: {
+        title: "জা মোশা আগরবাতি",
+        desc: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাতি",
+        order: "এখন অর্ডার করুন"
+      },
+      kn: {
+        title: "ಜಾ ಮೊಷಾ ಅಗರ್ಭತ್ತಿ",
+        desc: "100% ನೈಸರ್ಗಿಕ ಕಮ್ಮಿ ಮಾರಣ ಆಗರ್ಭತ್ತಿ",
+        order: "ಈಗ ऑರ್ಡರ್ ಮಾಡಿ"
+      }
+    };
+
+    function setLang(lang) {
+      document.querySelector('h1').textContent = texts[lang].title;
+      document.querySelector('h2').textContent = texts[lang].desc;
+      document.querySelectorAll('.btn').forEach(btn => btn.textContent = texts[lang].order);
+    }
+  </script></body>
 </html>

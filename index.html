@@ -3,17 +3,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ja Mosha Agarbatti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
     }.overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
   min-height: 100vh;
   padding: 40px 20px;
 }
@@ -47,21 +51,19 @@ h2 {
   margin-top: 30px;
   padding: 15px 30px;
   font-size: 1.1em;
-  background: #ff9800;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
   color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
 }
 
 .btn:hover {
-  background: #e68900;
-}
-
-.section {
-  margin-top: 50px;
+  transform: scale(1.05);
 }
 
 .footer {
@@ -70,112 +72,64 @@ h2 {
   color: #ccc;
 }
 
-.lang {
+.testimonial {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 15px;
   margin-top: 30px;
+  font-style: italic;
+  color: #eee;
 }
 
-.lang button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 0.9em;
-  cursor: pointer;
-  background: #ffffff33;
-  border: 1px solid #ffffff66;
-  border-radius: 20px;
-  color: white;
+.section {
+  margin-top: 60px;
 }
 
   </style>
-  <script>
-    function setLang(lang) {
-      const all = document.querySelectorAll('[data-lang]');
-      all.forEach(el => {
-        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
-      });
-    }
-  </script>
 </head>
-<body onload="setLang('en')">
+<body>
   <div class="overlay">
-    <h1>JA MOSHA AGARBATTI</h1>
-    <h2>100% Natural Mosquito Repellent Incense Sticks</h2><div class="lang">
-  <button onclick="setLang('en')">English</button>
-  <button onclick="setLang('hi')">हिंदी</button>
-  <button onclick="setLang('bn')">বাংলা</button>
-  <button onclick="setLang('kn')">ಕನ್ನಡ</button>
-</div>
-
-<div class="product">
+    <h1 data-aos="fade-down">JA MOSHA AGARBATTI</h1>
+    <h2 data-aos="fade-up">100% Natural Mosquito Repellent Incense Sticks</h2><div class="product" data-aos="zoom-in">
   <img src="pouch.png" alt="Agarbatti Pouch"/>
   <p class="price">₹10 | 12 Sticks</p>
 </div>
 
 <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
 
-<div class="section" data-lang="en">
-  <h2>How to Use:</h2>
-  <p>Light the tip of the incense stick, blow out the flame, and place it in a stand in a ventilated area.</p>
-  <h2>Precautions:</h2>
-  <p>Keep away from children and flammable objects. Use in a well-ventilated area.</p>
-  <h2>Ingredients:</h2>
-  <p>Herbal powders, natural oils, plant extracts.</p>
-  <h2>FAQ:</h2>
-  <p>Q: Does it really repel mosquitoes?<br/>A: Yes, it’s designed with natural mosquito-repelling ingredients.</p>
-  <h2>Contact:</h2>
-  <p>Coming soon...</p>
-  <h2>Address:</h2>
+<div class="section" data-aos="fade-up">
+  <h2>उपयोग की विधि</h2>
+  <p>अगरबत्ती को आग लगा कर कमरे के कोने में सुरक्षित स्थान पर रखें। बच्चों की पहुँच से दूर रखें।</p>
+</div>
+
+<div class="section" data-aos="fade-up">
+  <h2>Savdhaniyan</h2>
+  <p>ज्वलनशील पदार्थों से दूर रखें। इस्तेमाल के दौरान सावधानी बरतें।</p>
+</div>
+
+<div class="section" data-aos="fade-up">
+  <h2>सामग्री</h2>
+  <p>नीम, तुलसी, लेमनग्रास, यूकेलिप्टस, प्राकृतिक जड़ी-बूटियाँ</p>
+</div>
+
+<div class="testimonial" data-aos="fade-up">
+  “Best mosquito repellent! Very effective and smells great.”<br>
+  <small>- Ramesh, Bengaluru</small>
+</div>
+
+<div class="section" data-aos="fade-up">
+  <h2>पता</h2>
   <p>35, Guttahalli, Dattatreya Temple Street, Palace Guttahalli Main Road, 8th Cross, Malleshwaram, DNR Layout, Palace Guttahalli, Bengaluru, Karnataka 560003, India</p>
 </div>
 
-<div class="section" data-lang="hi">
-  <h2>उपयोग की विधि:</h2>
-  <p>अगरबत्ती के सिरे को जलाएं, लौ बुझाएं और एक स्टैंड में हवादार स्थान पर रखें।</p>
-  <h2>सावधानियाँ:</h2>
-  <p>बच्चों और ज्वलनशील वस्तुओं से दूर रखें। हवादार जगह में उपयोग करें।</p>
-  <h2>सामग्री:</h2>
-  <p>हर्बल पाउडर, प्राकृतिक तेल, पौधों के अर्क।</p>
-  <h2>प्रश्नोत्तर:</h2>
-  <p>प्र: क्या यह मच्छर भगाता है?<br/>उ: हाँ, यह प्राकृतिक सामग्री से बना है जो मच्छर भगाने में मदद करता है।</p>
-  <h2>संपर्क:</h2>
-  <p>जल्द आ रहा है...</p>
-  <h2>पता:</h2>
-  <p>35, गुट्टाहल्ली, दत्तात्रेय मंदिर स्ट्रीट, पैलेस गुट्टाहल्ली मेन रोड, 8वीं क्रॉस, मल्लेश्वरम, डीएनआर लेआउट, पैलेस गुट्टाहल्ली, बेंगलुरु, कर्नाटक 560003</p>
-</div>
-
-<div class="section" data-lang="bn">
-  <h2>ব্যবহারের পদ্ধতি:</h2>
-  <p>আগরবাতির আগা জ্বালান, আগুন নিভিয়ে একটি স্ট্যান্ডে বায়ুচলাচল স্থানেই রাখুন।</p>
-  <h2>সতর্কতা:</h2>
-  <p>শিশু ও দাহ্য বস্তু থেকে দূরে রাখুন। বাতাস চলাচলযুক্ত স্থানে ব্যবহার করুন।</p>
-  <h2>উপাদান:</h2>
-  <p>ভেষজ গুঁড়ো, প্রাকৃতিক তেল, উদ্ভিদের নির্যাস।</p>
-  <h2>প্রশ্নোত্তর:</h2>
-  <p>প্র: এটি কি মশা দূর করে?<br/>উ: হ্যাঁ, এটি প্রাকৃতিক উপাদান দিয়ে তৈরি যা মশা দূর করতে সহায়তা করে।</p>
-  <h2>যোগাযোগ:</h2>
-  <p>শীঘ্রই আসছে...</p>
-  <h2>ঠিকানা:</h2>
-  <p>৩৫, গুট্টাহল্লি, দত্তাত্রেয় মন্দির স্ট্রিট, প্যালেস গুট্টাহল্লি মেইন রোড, ৮তম ক্রস, মল্লেশ্বরম, ডিএনআর লেআউট, প্যালেস গুট্টাহল্লি, বেঙ্গালুরু, কর্ণাটক ৫৬০০০৩</p>
-</div>
-
-<div class="section" data-lang="kn">
-  <h2>ಬಳಕೆ ವಿಧಾನ:</h2>
-  <p>ಅಗರಬತ್ತಿಯ ತುದಿಯನ್ನು ಹೊತ್ತಿಸಿ, ಜ್ವಾಲೆಯನ್ನು ನಂದಿಸಿ, ಹವಾ ಓಡಾಡುವ ಸ್ಥಳದಲ್ಲಿ ನಿಲ್ಲಿಸಿ.</p>
-  <h2>ಎಚ್ಚರಿಕೆ:</h2>
-  <p>ಮಕ್ಕಳು ಮತ್ತು ಸುಲಿಗೆ ವಸ್ತುಗಳಿಂದ ದೂರವಿರಿಸಿ. ಗಾಳಿಚಲನೆ ಇರುವ ಸ್ಥಳದಲ್ಲಿ ಉಪಯೋಗಿಸಿ.</p>
-  <h2>ಸಾಮಗ್ರಿಗಳು:</h2>
-  <p>ಸಸ್ಯ ದ್ರವ್ಯಗಳು, ನೈಸರ್ಗಿಕ ತೈಲಗಳು, ಹೆರ್ಬಲ್ ಪುಡಿಗಳು.</p>
-  <h2>FAQ:</h2>
-  <p>ಪ್ರ: ಇದು ನಿಜವಾಗಿಯೂ ಕಿಡಿಗೇಡಿಗಳನ್ನು ತಡೆಹಿಡಿಯುತ್ತದೆಯೇ?<br/>ಉ: ಹೌದು, ಇದು ನೈಸರ್ಗಿಕ ಕೀಟವನ್ನು ತಡೆಗಟ್ಟುವ ಘಟಕಗಳೊಂದಿಗೆ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.</p>
-  <h2>ಸಂಪರ್ಕ:</h2>
-  <p>ಬರಲಿದ್ದೇವೆ...</p>
-  <h2>ವಿಳಾಸ:</h2>
-  <p>೩೫, ಗುಟ್ಟಹಳ್ಳಿ, ದತ್ತಾತ್ರೇಯ ದೇವಸ್ಥಾನದ ಬೀದಿ, ಪ್ಯಾಲೆಸ್ ಗುಟ್ಟಹಳ್ಳಿ ಮುಖ್ಯ ರಸ್ತೆ, ೮ನೇ ಕ್ರಾಸ್, ಮಲ್ಲೇಶ್ವರಂ, ಡಿಎನ್‌ಆರ್ ಲೇಔಟ್, ಪ್ಯಾಲೆಸ್ ಗುಟ್ಟಹಳ್ಳಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ ೫೬೦೦೦೩</p>
+<div class="section" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p><i class="fas fa-phone"></i> Coming Soon...</p>
 </div>
 
 <div class="footer">
-  Made with love in India | Contact: 8439021253
+  Made with love in India | <i class="fas fa-leaf"></i> Natural & Effective
 </div>
 
-  </div>
-</body>
+  </div>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>AOS.init();</script></body>
 </html>

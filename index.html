@@ -1,125 +1,166 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ja Mosha Agarbatti</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
+      background: #1a1a1a;
       color: white;
       text-align: center;
+      padding: 20px;
     }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 0.5em;
-    }
-
-    .product img {
-      width: 250px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    select {
       margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
     }
-
     .section {
-      margin-top: 50px;
+      margin-top: 40px;
     }
-
-    .btn {
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.1em;
-      background: #ff9800;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background: #e68900;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
-    .footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #ccc;
+    .label {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>JA MOSHA AGARBATTI</h1>
-    <h2>100% Natural Mosquito Repellent Incense Sticks</h2>
+  <h1>JA MOSHA AGARBATTI</h1>
+  <select id="languageSelect">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="bn">Bengali</option>
+    <option value="kn">Kannada</option>
+  </select>
 
-    <div class="product">
-      <img src="pouch.png" alt="Agarbatti Pouch"/>
-      <p class="price">₹10 | 12 Sticks</p>
-    </div>
-
-    <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
-
-    <!-- Hindi Details Section -->
-    <div class="section">
-      <h2>उपयोग की विधि</h2>
-      <p>मच्छर भगाने वाली अगरबत्ती को सामान्य अगरबत्ती की तरह जलाएं और कमरे में रखें।</p>
-
-      <h2>सावधानियाँ</h2>
-      <ul>
-        <li>बच्चों की पहुँच से दूर रखें।</li>
-        <li>सीधे सांस में ना लें।</li>
-        <li>ठंडी और सूखी जगह पर रखें।</li>
-      </ul>
-
-      <h2>सामग्री</h2>
-      <p>नीम, तुलसी, लेमनग्रास, चंदन, प्राकृतिक जड़ी-बूटियाँ</p>
-
-      <h2>निर्माता</h2>
-      <p>35, Guttahalli, Dattatreya Temple Street, Palace Guttahalli Main Road, 8th Cross, Malleshwaram, DNR Layout, Palace Guttahalli, Bengaluru, Karnataka 560003, India</p>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="section">
-      <h2>FAQs</h2>
-      <ul>
-        <li><strong>Q:</strong> क्या यह बच्चों के लिए सुरक्षित है?<br><strong>A:</strong> हां, जब तक वह सीधे संपर्क में ना आएं।</li>
-        <li><strong>Q:</strong> क्या ये पूरी रात जलती है?<br><strong>A:</strong> लगभग 2-3 घंटे तक असर बनाए रखती है।</li>
-        <li><strong>Q:</strong> क्या इसमें कोई केमिकल है?<br><strong>A:</strong> नहीं, यह 100% प्राकृतिक सामग्री से बनी है।</li>
-      </ul>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section">
-      <h2>Contact</h2>
-      <p>आप जल्द ही हमसे संपर्क कर पाएंगे।</p>
-      <p><em>Contact: Coming soon...</em></p>
-    </div>
-
-    <div class="footer">
-      Made with love in India | Contact: 8439021253
-    </div>
+  <div class="section">
+    <div class="label" data-i18n="usage_title"></div>
+    <div data-i18n="usage"></div>
   </div>
+
+  <div class="section">
+    <div class="label" data-i18n="precautions_title"></div>
+    <div data-i18n="precautions"></div>
+  </div>
+
+  <div class="section">
+    <div class="label" data-i18n="ingredients_title"></div>
+    <div data-i18n="ingredients"></div>
+  </div>
+
+  <div class="section">
+    <div class="label" data-i18n="address_title"></div>
+    <div data-i18n="address"></div>
+  </div>
+
+  <div class="section">
+    <div class="label">FAQ</div>
+    <div data-i18n="faq1_q"></div>
+    <div data-i18n="faq1_a"></div>
+    <div data-i18n="faq2_q"></div>
+    <div data-i18n="faq2_a"></div>
+    <div data-i18n="faq3_q"></div>
+    <div data-i18n="faq3_a"></div>
+  </div>
+
+  <div class="section">
+    <div class="label" data-i18n="contact_title"></div>
+    <div data-i18n="contact"></div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        usage_title: "Usage Instructions",
+        usage: "Light the mosquito repellent incense stick like a regular incense stick and place it in the room.",
+        precautions_title: "Precautions",
+        precautions: "Keep out of reach of children. Do not inhale directly. Store in a cool and dry place.",
+        ingredients_title: "Ingredients",
+        ingredients: "Neem, Tulsi, Lemongrass, Sandalwood, Natural Herbs",
+        address_title: "Manufacturer Address",
+        address: "35, Guttahalli, Dattatreya Temple Street, Palace Guttahalli Main Road, 8th Cross, Malleshwaram, Bengaluru, Karnataka 560003, India",
+        faq1_q: "Is it safe for children?",
+        faq1_a: "Yes, as long as they don't come into direct contact.",
+        faq2_q: "Does it last all night?",
+        faq2_a: "It works effectively for 2–3 hours.",
+        faq3_q: "Any chemicals inside?",
+        faq3_a: "No, it is made from 100% natural ingredients.",
+        contact_title: "Contact",
+        contact: "You will be able to contact us soon."
+      },
+      hi: {
+        usage_title: "उपयोग की विधि",
+        usage: "मच्छर भगाने वाली अगरबत्ती को सामान्य अगरबत्ती की तरह जलाएं और कमरे में रखें।",
+        precautions_title: "सावधानियाँ",
+        precautions: "बच्चों की पहुँच से दूर रखें। सीधे सांस में ना लें। ठंडी और सूखी जगह पर रखें।",
+        ingredients_title: "सामग्री",
+        ingredients: "नीम, तुलसी, लेमनग्रास, चंदन, प्राकृतिक जड़ी-बूटियाँ",
+        address_title: "निर्माता का पता",
+        address: "35, गुट्टाहल्ली, दत्तात्रेय मंदिर स्ट्रीट, पैलेस गुट्टाहल्ली मेन रोड, 8वां क्रॉस, मल्लेश्वरम, बैंगलोर, कर्नाटक 560003",
+        faq1_q: "क्या यह बच्चों के लिए सुरक्षित है?",
+        faq1_a: "हाँ, जब तक कि वे सीधे संपर्क में न आएं।",
+        faq2_q: "क्या यह पूरी रात जलती है?",
+        faq2_a: "लगभग 2–3 घंटे तक असर बनाए रखती है।",
+        faq3_q: "क्या इसमें कोई रसायन है?",
+        faq3_a: "नहीं, यह 100% प्राकृतिक सामग्री से बनी है।",
+        contact_title: "संपर्क करें",
+        contact: "आप जल्द ही हमसे संपर्क कर पाएंगे।"
+      },
+      bn: {
+        usage_title: "ব্যবহারের পদ্ধতি",
+        usage: "মশা তাড়ানোর আগরবাতি সাধারণ আগরবাতির মতো জ্বালান এবং ঘরে রাখুন।",
+        precautions_title: "সতর্কতা",
+        precautions: "শিশুদের নাগালের বাইরে রাখুন। সরাসরি শ্বাস নেবেন না। ঠাণ্ডা ও শুকনো জায়গায় রাখুন।",
+        ingredients_title: "উপাদান",
+        ingredients: "নিম, তুলসি, লেমনগ্রাস, চন্দন, প্রাকৃতিক ভেষজ",
+        address_title: "প্রস্তুতকারকের ঠিকানা",
+        address: "৩৫, গুট্টাহল্লি, দত্তাত্রেয় মন্দির স্ট্রীট, প্যালেস গুট্টাহল্লি মেইন রোড, ৮ম ক্রস, মল্লেশ্বরম, বেঙ্গালুরু, কর্ণাটক ৫৬০০০৩",
+        faq1_q: "এটি কি শিশুদের জন্য নিরাপদ?",
+        faq1_a: "হ্যাঁ, যতক্ষণ না তারা সরাসরি সংস্পর্শে আসে।",
+        faq2_q: "এটি কি পুরো রাত জ্বলে?",
+        faq2_a: "প্রায় ২–৩ ঘণ্টা পর্যন্ত কার্যকর থাকে।",
+        faq3_q: "এর মধ্যে কি কোনো রাসায়নিক আছে?",
+        faq3_a: "না, এটি ১০০% প্রাকৃতিক উপাদানে তৈরি।",
+        contact_title: "যোগাযোগ",
+        contact: "আপনি শীঘ্রই আমাদের সাথে যোগাযোগ করতে পারবেন।"
+      },
+      kn: {
+        usage_title: "ಬಳಕೆ ವಿಧಾನ",
+        usage: "ಸಾಮಾನ್ಯ ಅಗರಬತ್ತಿಯಂತೆ ಕಿಟ್ಕಿ ಓಡಿಸುವ ಅಗರಬತ್ತಿಯನ್ನು ಬೆಳಗಿಸಿ ಕೊಠಡಿಯಲ್ಲಿ ಇಡಿ.",
+        precautions_title: "ಜಾಗ್ರತೆ",
+        precautions: "ಮಕ್ಕಳ ದೆಸೆಗಿನಿಂದ ದೂರವಿರಿಸಿ. ನೇರವಾಗಿ ಉಸಿರಾಡಬೇಡಿ. ತಂಪಾದ ಮತ್ತು ಒಣ ಸ್ಥಳದಲ್ಲಿ ಇಡಿ.",
+        ingredients_title: "ಪದಾರ್ಥಗಳು",
+        ingredients: "ನೀಮ್, ತುಳಸಿ, ಲೆಮನ್ ಗ್ರಾಸ್, ಚಂದನ, ನೈಸರ್ಗಿಕ ಹಣ್ಣುಗಳು",
+        address_title: "ಉತ್ಪಾದಕರ ವಿಳಾಸ",
+        address: "35, ಗುತ್ತಹಳ್ಳಿ, ದತ್ತಾತ್ರೇಯ ದೇವಸ್ಥಾನ ರಸ್ತೆ, ಪ್ಯಾಲೆಸ್ ಗುತ್ತಹಳ್ಳಿ ಮುಖ್ಯ ರಸ್ತೆ, 8ನೇ ಕ್ರಾಸ್, ಮಲ್ಲೇಶ್ವರಂ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560003",
+        faq1_q: "ಇದು ಮಕ್ಕಳಿಗೆ ಸುರಕ್ಷಿತವೇ?",
+        faq1_a: "ಹೌದು, ನೇರ ಸಂಪರ್ಕಕ್ಕೆ ಬಾರದವರೆಗೂ.",
+        faq2_q: "ಇದು ಸಂಪೂರ್ಣ ರಾತ್ರಿ ಸುಡುವದೆಯೆ?",
+        faq2_a: "ಇದು ಸುಮಾರು 2–3 ಗಂಟೆಗಳ ಕಾಲ ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ.",
+        faq3_q: "ಇದರಲ್ಲಿ ರಾಸಾಯನಿಕಗಳಿವೆಯೆ?",
+        faq3_a: "ಇಲ್ಲ, ಇದು 100% ನೈಸರ್ಗಿಕ ಪದಾರ್ಥಗಳಿಂದ ಮಾಡಲಾಗಿದೆ.",
+        contact_title: "ಸಂಪರ್ಕ",
+        contact: "ನೀವು ಶೀಘ್ರದಲ್ಲೇ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಬಹುದು."
+      }
+    };
+
+    const elements = document.querySelectorAll('[data-i18n]');
+    const select = document.getElementById('languageSelect');
+
+    function updateLanguage(lang) {
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = translations[lang][key] || '';
+      });
+    }
+
+    select.addEventListener('change', e => updateLanguage(e.target.value));
+    updateLanguage('en');
+  </script>
 </body>
 </html>

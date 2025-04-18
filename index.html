@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JA MOSHA AGARBATTI</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
@@ -22,46 +24,68 @@
     }
 
     .language-select {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     select {
-      padding: 8px 12px;
+      padding: 10px 15px;
       border-radius: 8px;
       border: none;
       font-size: 1em;
+      background: white;
+      color: black;
+      font-weight: 600;
+      cursor: pointer;
     }
 
     h1 {
       font-size: 3em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
     }
 
     h2 {
       margin: 0.2em 0;
-      font-weight: normal;
+      font-weight: 400;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
     }
 
     .product {
-      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 20px;
       max-width: 300px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
     }
 
     .product img {
       width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
     .price {
-      font-size: 1.3em;
-      margin-top: 10px;
+      font-size: 1.2em;
+      margin: 10px 0;
+      color: #ffcc00;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 1.1em;
+      margin-top: 10px;
+      padding: 12px 20px;
+      font-size: 1em;
       background: #ff9800;
       color: white;
       border: none;
@@ -69,22 +93,28 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
-      background: #e68900;
+      background: #e68a00;
     }
 
     .footer {
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 0.9em;
       color: #ccc;
     }
 
     .platforms {
-      margin-top: 20px;
+      margin-top: 10px;
       font-size: 1em;
       color: #ffcc00;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -103,20 +133,24 @@
     <h2 id="subtitle">100% Natural Mosquito Repellent Incense Sticks</h2>
     <p class="platforms" id="platforms">Available on Flipkart | Amazon</p>
 
-    <div class="product">
-      <img src="p1.png" alt="P1 Agarbatti">
-      <h3 id="p1name">P1 - Herbal Mosquito Repellent</h3>
-      <p id="p1desc">Infused with natural oils to repel mosquitoes effectively while giving a soothing fragrance.</p>
-      <p class="price">₹10 | 12 Sticks</p>
-      <a id="p1btn" href="https://wa.me/918439021253?text=I%20want%20to%20order%20P1%20Agarbatti" class="btn">Order P1 on WhatsApp</a>
-    </div>
+    <div class="product-container">
+      <!-- P2 First -->
+      <div class="product">
+        <img src="p2.png" alt="P2 Agarbatti">
+        <h3 id="p2name">P2 - Ayurvedic Night Guard</h3>
+        <p id="p2desc">Made from ayurvedic herbs to keep your nights peaceful and mosquito-free.</p>
+        <p class="price">₹10 | 12 Sticks</p>
+        <a id="p2btn" href="https://wa.me/918439021253?text=I%20want%20to%20order%20P2%20Agarbatti" class="btn">Order P2 on WhatsApp</a>
+      </div>
 
-    <div class="product">
-      <img src="p2.png" alt="P2 Agarbatti">
-      <h3 id="p2name">P2 - Ayurvedic Night Guard</h3>
-      <p id="p2desc">Made from ayurvedic herbs to keep your nights peaceful and mosquito-free.</p>
-      <p class="price">₹10 | 12 Sticks</p>
-      <a id="p2btn" href="https://wa.me/918439021253?text=I%20want%20to%20order%20P2%20Agarbatti" class="btn">Order P2 on WhatsApp</a>
+      <!-- P1 Second -->
+      <div class="product">
+        <img src="p1.png" alt="P1 Agarbatti">
+        <h3 id="p1name">P1 - Herbal Mosquito Repellent</h3>
+        <p id="p1desc">Infused with natural oils to repel mosquitoes effectively while giving a soothing fragrance.</p>
+        <p class="price">₹10 | 12 Sticks</p>
+        <a id="p1btn" href="https://wa.me/918439021253?text=I%20want%20to%20order%20P1%20Agarbatti" class="btn">Order P1 on WhatsApp</a>
+      </div>
     </div>
 
     <div class="footer" id="footer">

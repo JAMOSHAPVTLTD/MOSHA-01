@@ -21,6 +21,17 @@
       padding: 40px 20px;
     }
 
+    .language-select {
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+
     h1 {
       font-size: 3em;
       margin-bottom: 0.2em;
@@ -79,29 +90,98 @@
 </head>
 <body>
   <div class="overlay">
-    <h1>JA MOSHA AGARBATTI</h1>
-    <h2>100% Natural Mosquito Repellent Incense Sticks</h2>
-    <p class="platforms">Available on Flipkart | Amazon</p>
+    <div class="language-select">
+      <select onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="bn">বাংলা</option>
+        <option value="kn">ಕನ್ನಡ</option>
+      </select>
+    </div>
+
+    <h1 id="title">JA MOSHA AGARBATTI</h1>
+    <h2 id="subtitle">100% Natural Mosquito Repellent Incense Sticks</h2>
+    <p class="platforms" id="platforms">Available on Flipkart | Amazon</p>
 
     <div class="product">
       <img src="p1.png" alt="P1 Agarbatti">
-      <h3>P1 - Herbal Mosquito Repellent</h3>
-      <p>Infused with natural oils to repel mosquitoes effectively while giving a soothing fragrance.</p>
+      <h3 id="p1name">P1 - Herbal Mosquito Repellent</h3>
+      <p id="p1desc">Infused with natural oils to repel mosquitoes effectively while giving a soothing fragrance.</p>
       <p class="price">₹10 | 12 Sticks</p>
-      <a href="https://wa.me/918439021253?text=I%20want%20to%20order%20P1%20Agarbatti" class="btn">Order P1 on WhatsApp</a>
+      <a id="p1btn" href="https://wa.me/918439021253?text=I%20want%20to%20order%20P1%20Agarbatti" class="btn">Order P1 on WhatsApp</a>
     </div>
 
     <div class="product">
       <img src="p2.png" alt="P2 Agarbatti">
-      <h3>P2 - Ayurvedic Night Guard</h3>
-      <p>Made from ayurvedic herbs to keep your nights peaceful and mosquito-free.</p>
+      <h3 id="p2name">P2 - Ayurvedic Night Guard</h3>
+      <p id="p2desc">Made from ayurvedic herbs to keep your nights peaceful and mosquito-free.</p>
       <p class="price">₹10 | 12 Sticks</p>
-      <a href="https://wa.me/918439021253?text=I%20want%20to%20order%20P2%20Agarbatti" class="btn">Order P2 on WhatsApp</a>
+      <a id="p2btn" href="https://wa.me/918439021253?text=I%20want%20to%20order%20P2%20Agarbatti" class="btn">Order P2 on WhatsApp</a>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="footer">
       Made with love in India | Contact: coming soon...
     </div>
   </div>
+
+  <script>
+    const langData = {
+      en: {
+        title: "JA MOSHA AGARBATTI",
+        subtitle: "100% Natural Mosquito Repellent Incense Sticks",
+        platforms: "Available on Flipkart | Amazon",
+        p1name: "P1 - Herbal Mosquito Repellent",
+        p1desc: "Infused with natural oils to repel mosquitoes effectively while giving a soothing fragrance.",
+        p1btn: "Order P1 on WhatsApp",
+        p2name: "P2 - Ayurvedic Night Guard",
+        p2desc: "Made from ayurvedic herbs to keep your nights peaceful and mosquito-free.",
+        p2btn: "Order P2 on WhatsApp",
+        footer: "Made with love in India | Contact: coming soon..."
+      },
+      hi: {
+        title: "जा मोशा अगरबत्ती",
+        subtitle: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
+        platforms: "Flipkart | Amazon पर उपलब्ध",
+        p1name: "P1 - हर्बल मच्छर भगाने वाली",
+        p1desc: "प्राकृतिक तेलों से युक्त जो मच्छरों को दूर भगाए और सुगंध दे।",
+        p1btn: "WhatsApp पर P1 ऑर्डर करें",
+        p2name: "P2 - आयुर्वेदिक नाइट गार्ड",
+        p2desc: "आयुर्वेदिक जड़ी-बूटियों से बनी जो रात को मच्छरों से सुरक्षा दे।",
+        p2btn: "WhatsApp पर P2 ऑर्डर करें",
+        footer: "भारत में प्यार से निर्मित | संपर्क: जल्द आ रहा है..."
+      },
+      bn: {
+        title: "জা মোশা আগরবাতি",
+        subtitle: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাতি",
+        platforms: "Flipkart | Amazon-এ উপলব্ধ",
+        p1name: "P1 - হারবাল মশা তাড়ানোর",
+        p1desc: "প্রাকৃতিক তেলে সমৃদ্ধ যা মশা দূর করে এবং সুগন্ধ দেয়।",
+        p1btn: "WhatsApp-এ P1 অর্ডার করুন",
+        p2name: "P2 - আয়ুর্বেদিক নাইট গার্ড",
+        p2desc: "আয়ুর্বেদিক ভেষজে তৈরি যা রাতে শান্তিতে ঘুমাতে সাহায্য করে।",
+        p2btn: "WhatsApp-এ P2 অর্ডার করুন",
+        footer: "ভালোবাসা দিয়ে ভারতে তৈরি | যোগাযোগ: শীঘ্রই আসছে..."
+      },
+      kn: {
+        title: "ಜಾ ಮೋಶಾ ಅಗರಬತ್ತಿ",
+        subtitle: "100% ನೈಸರ್ಗಿಕ ಕಿಡಿಸೆರೆ ಬೆಂಕಿಹಚ್ಚುವ ಕಡ್ಡಿಗಳು",
+        platforms: "Flipkart | Amazon ಲಭ್ಯವಿದೆ",
+        p1name: "P1 - ಹರ್ಬಲ್ ಕಿಡಿಸೆರೆ ತಡೆದುವು",
+        p1desc: "ನೈಸರ್ಗಿಕ ಎಣ್ಣೆಗಳಿಂದ ಕೀಟಗಳನ್ನು ತಡೆದು ಸುಗಂಧ ನೀಡುತ್ತದೆ.",
+        p1btn: "WhatsApp ನಲ್ಲಿ P1 ಆರ್ಡರ್ ಮಾಡಿ",
+        p2name: "P2 - ಆಯುರ್ವೇದ ನೈಟ್ ಗಾರ್ಡ್",
+        p2desc: "ಆಯುರ್ವೇದ ದ್ರವ್ಯಗಳಿಂದ ರಾತ್ರಿಯಲ್ಲಿ ಕೀಟಗಳನ್ನು ದೂರ ಇಡುತ್ತದೆ.",
+        p2btn: "WhatsApp ನಲ್ಲಿ P2 ಆರ್ಡರ್ ಮಾಡಿ",
+        footer: "ಭಾರತದಲ್ಲಿ ಪ್ರೀತಿಯಿಂದ ನಿರ್ಮಿತವಾಗಿದೆ | ಸಂಪರ್ಕ: ಶೀಘ್ರದಲ್ಲೇ..."
+      }
+    };
+
+    function changeLanguage(lang) {
+      const content = langData[lang];
+      for (const id in content) {
+        document.getElementById(id).textContent = content[id];
+      }
+    }
+  </script>
 </body>
 </html>

@@ -22,15 +22,18 @@
 h1 {
   font-size: 3em;
   margin-bottom: 0.2em;
+  animation: fadeInDown 1.5s ease-out;
 }
 
 h2 {
   margin: 0.2em 0;
   font-weight: normal;
+  animation: fadeInUp 2s ease-out;
 }
 
 .product {
   margin-top: 40px;
+  animation: fadeIn 2s ease-out;
 }
 
 .product img {
@@ -55,6 +58,7 @@ h2 {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  animation: bounceIn 2s ease;
 }
 
 .btn:hover {
@@ -65,6 +69,27 @@ h2 {
   margin-top: 60px;
   font-size: 0.9em;
   color: #ccc;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  0% {opacity: 0; transform: translateY(-40px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(40px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes bounceIn {
+  0% {transform: scale(0.5); opacity: 0;}
+  100% {transform: scale(1); opacity: 1;}
 }
 
 /* Agarbatti Animation */
@@ -103,9 +128,8 @@ h2 {
 .mosquito {
   font-size: 30px;
   position: fixed;
-  left: 80%;
   top: -40px;
-  animation: fall 5s infinite linear;
+  animation: fall 6s linear infinite;
 }
 
 @keyframes fall {
@@ -114,19 +138,30 @@ h2 {
   100% { top: 110%; opacity: 0; }
 }
 
+.mosquito:nth-child(1) { left: 10%; animation-delay: 0s; }
+.mosquito:nth-child(2) { left: 20%; animation-delay: 1s; }
+.mosquito:nth-child(3) { left: 30%; animation-delay: 2s; }
+.mosquito:nth-child(4) { left: 40%; animation-delay: 3s; }
+.mosquito:nth-child(5) { left: 50%; animation-delay: 1.5s; }
+.mosquito:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+.mosquito:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+.mosquito:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+.mosquito:nth-child(9) { left: 90%; animation-delay: 1.2s; }
+.mosquito:nth-child(10) { left: 95%; animation-delay: 2.8s; }
+
   </style>
 </head>
 <body>
   <div class="overlay">
     <h1>JA MOSHA AGARBATTI</h1>
     <h2>100% Natural Mosquito Repellent Incense Sticks</h2><div class="product">
-  <img src="p1.png" alt="P1 Product" />
-  <p class="price">P1 | ₹10 | 12 Sticks</p>
+  <img src="p2.png" alt="P2 Product" />
+  <p class="price">P2 | ₹10 | 12 Sticks</p>
 </div>
 
 <div class="product">
-  <img src="p2.png" alt="P2 Product" />
-  <p class="price">P2 | ₹10 | 12 Sticks</p>
+  <img src="p1.png" alt="P1 Product" />
+  <p class="price">P1 | ₹10 | 12 Sticks</p>
 </div>
 
 <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
@@ -138,6 +173,16 @@ h2 {
   <div class="smoke"></div>
 </div>
 
+<!-- Multiple Mosquito Animation -->
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
+<div class="mosquito">🦟</div>
 <div class="mosquito">🦟</div>
 
 <div class="footer">

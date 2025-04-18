@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,74 +7,145 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: #1a1a1a;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
       color: white;
       text-align: center;
-      padding: 20px;
-    }
-    select {
-      margin-top: 20px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-    }
-    .section {
-      margin-top: 40px;
-    }
-    .label {
-      font-weight: bold;
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
+    }.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  margin: 0.2em 0;
+  font-weight: normal;
+}
+
+.product {
+  margin-top: 40px;
+}
+
+.product img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.price {
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+select {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
   </style>
 </head>
 <body>
-  <h1>JA MOSHA AGARBATTI</h1>
-  <select id="languageSelect">
-    <option value="en">English</option>
-    <option value="hi">Hindi</option>
-    <option value="bn">Bengali</option>
-    <option value="kn">Kannada</option>
-  </select>
+  <div class="overlay">
+    <img src="logo.png" alt="Ja Mosha Logo" width="80" />
+    <h1>JA MOSHA AGARBATTI</h1>
+    <h2 data-i18n="product_desc">100% Natural Mosquito Repellent Incense Sticks</h2><select id="languageSelect">
+  <option value="en">English</option>
+  <option value="hi">Hindi</option>
+  <option value="bn">Bengali</option>
+  <option value="kn">Kannada</option>
+</select>
 
-  <div class="section">
-    <div class="label" data-i18n="usage_title"></div>
-    <div data-i18n="usage"></div>
-  </div>
+<div class="product">
+  <img src="pouch.png" alt="Agarbatti Pouch"/>
+  <p class="price">₹10 | 12 Sticks</p>
+</div>
 
-  <div class="section">
-    <div class="label" data-i18n="precautions_title"></div>
-    <div data-i18n="precautions"></div>
-  </div>
+<a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
 
-  <div class="section">
-    <div class="label" data-i18n="ingredients_title"></div>
-    <div data-i18n="ingredients"></div>
-  </div>
+<div class="section">
+  <div class="label" data-i18n="usage_title"></div>
+  <div data-i18n="usage"></div>
+</div>
 
-  <div class="section">
-    <div class="label" data-i18n="address_title"></div>
-    <div data-i18n="address"></div>
-  </div>
+<div class="section">
+  <div class="label" data-i18n="precautions_title"></div>
+  <div data-i18n="precautions"></div>
+</div>
 
-  <div class="section">
-    <div class="label">FAQ</div>
-    <div data-i18n="faq1_q"></div>
-    <div data-i18n="faq1_a"></div>
-    <div data-i18n="faq2_q"></div>
-    <div data-i18n="faq2_a"></div>
-    <div data-i18n="faq3_q"></div>
-    <div data-i18n="faq3_a"></div>
-  </div>
+<div class="section">
+  <div class="label" data-i18n="ingredients_title"></div>
+  <div data-i18n="ingredients"></div>
+</div>
 
-  <div class="section">
-    <div class="label" data-i18n="contact_title"></div>
-    <div data-i18n="contact"></div>
-  </div>
+<div class="section">
+  <div class="label" data-i18n="address_title"></div>
+  <div data-i18n="address"></div>
+</div>
 
-  <script>
+<div class="section">
+  <div class="label">FAQ</div>
+  <div data-i18n="faq1_q"></div>
+  <div data-i18n="faq1_a"></div>
+  <div data-i18n="faq2_q"></div>
+  <div data-i18n="faq2_a"></div>
+  <div data-i18n="faq3_q"></div>
+  <div data-i18n="faq3_a"></div>
+</div>
+
+<div class="section">
+  <div class="label" data-i18n="contact_title"></div>
+  <div data-i18n="contact"></div>
+</div>
+
+<div class="footer">
+  Made with love in India | Contact: 8439021253
+</div>
+
+  </div>  <script>
     const translations = {
       en: {
+        product_desc: "100% Natural Mosquito Repellent Incense Sticks",
         usage_title: "Usage Instructions",
         usage: "Light the mosquito repellent incense stick like a regular incense stick and place it in the room.",
         precautions_title: "Precautions",
@@ -94,6 +164,7 @@
         contact: "You will be able to contact us soon."
       },
       hi: {
+        product_desc: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
         usage_title: "उपयोग की विधि",
         usage: "मच्छर भगाने वाली अगरबत्ती को सामान्य अगरबत्ती की तरह जलाएं और कमरे में रखें।",
         precautions_title: "सावधानियाँ",
@@ -112,6 +183,7 @@
         contact: "आप जल्द ही हमसे संपर्क कर पाएंगे।"
       },
       bn: {
+        product_desc: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাতি",
         usage_title: "ব্যবহারের পদ্ধতি",
         usage: "মশা তাড়ানোর আগরবাতি সাধারণ আগরবাতির মতো জ্বালান এবং ঘরে রাখুন।",
         precautions_title: "সতর্কতা",
@@ -130,6 +202,7 @@
         contact: "আপনি শীঘ্রই আমাদের সাথে যোগাযোগ করতে পারবেন।"
       },
       kn: {
+        product_desc: "100% ನೈಸರ್ಗಿಕ ಕಿಟ್ಕಿ ಓಡಿಸುವ ಅಗರಬತ್ತಿ",
         usage_title: "ಬಳಕೆ ವಿಧಾನ",
         usage: "ಸಾಮಾನ್ಯ ಅಗರಬತ್ತಿಯಂತೆ ಕಿಟ್ಕಿ ಓಡಿಸುವ ಅಗರಬತ್ತಿಯನ್ನು ಬೆಳಗಿಸಿ ಕೊಠಡಿಯಲ್ಲಿ ಇಡಿ.",
         precautions_title: "ಜಾಗ್ರತೆ",
@@ -161,6 +234,5 @@
 
     select.addEventListener('change', e => updateLanguage(e.target.value));
     updateLanguage('en');
-  </script>
-</body>
+  </script></body>
 </html>

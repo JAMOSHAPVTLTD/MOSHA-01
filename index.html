@@ -1,235 +1,125 @@
-<!DOCTYPE html><html lang="en">
+<!-- Paste this updated code into your index.html -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ja Mosha Agarbatti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Arial', sans-serif;
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
-    }.overlay {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  min-height: 100vh;
-  padding: 40px 20px;
-}
+    }
 
-.lang-switcher {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-}
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
 
-.lang-switcher button {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1em;
-  margin: 0 5px;
-  cursor: pointer;
-  text-decoration: underline;
-}
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 0.2em;
-}
+    h2 {
+      margin: 0.2em 0;
+      font-weight: normal;
+    }
 
-h2 {
-  margin: 0.2em 0;
-  font-weight: normal;
-}
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
 
-.product {
-  margin-top: 40px;
-}
+    .product {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      width: 280px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
 
-.product img {
-  width: 250px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.price {
-  font-size: 1.3em;
-  margin-top: 10px;
-}
+    .product h3 {
+      margin-top: 15px;
+      font-size: 1.4em;
+      color: #ff9800;
+    }
 
-.btn {
-  margin-top: 30px;
-  padding: 15px 30px;
-  font-size: 1.1em;
-  background: linear-gradient(135deg, #ff9800, #ff5722);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-}
+    .product p {
+      font-size: 0.95em;
+      margin: 10px 0;
+    }
 
-.btn:hover {
-  transform: scale(1.05);
-}
+    .price {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
 
-.footer {
-  margin-top: 60px;
-  font-size: 0.9em;
-  color: #ccc;
-}
+    .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-.testimonial {
-  background: rgba(255,255,255,0.1);
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 30px;
-  font-style: italic;
-  color: #eee;
-}
+    .btn:hover {
+      background: #e68900;
+    }
 
-.section {
-  margin-top: 60px;
-}
-
+    .footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <div class="lang-switcher">
-      <button onclick="setLang('en')">English</button>
-      <button onclick="setLang('hi')">हिन्दी</button>
-      <button onclick="setLang('bn')">বাংলা</button>
-      <button onclick="setLang('kn')">ಕನ್ನಡ</button>
-    </div><h1 data-aos="fade-down" data-i18n="title">JA MOSHA AGARBATTI</h1>
-<h2 data-aos="fade-up" data-i18n="subtitle">100% Natural Mosquito Repellent Incense Sticks</h2>
+    <h1>JA MOSHA AGARBATTI</h1>
+    <h2>100% Natural Mosquito Repellent Incense Sticks</h2>
 
-<div class="product" data-aos="zoom-in">
-  <img src="pouch.png" alt="Agarbatti Pouch"/>
-  <p class="price">₹10 | 12 Sticks</p>
-</div>
+    <div class="products">
+      <div class="product">
+        <img src="p1.jpg" alt="Ja Mosha Pouch Pack"/>
+        <h3>P1 – Pouch Pack</h3>
+        <p>A compact mosquito repellent incense stick pack, perfect for daily home use.</p>
+        <p class="price">₹10 | 12 Sticks</p>
+        <a href="https://wa.me/918439021253?text=I%20want%20to%20order%20P1%20Ja%20Mosha%20Agarbatti" class="btn">Order P1</a>
+      </div>
 
-<a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn" data-i18n="order">Order Now on WhatsApp</a>
+      <div class="product">
+        <img src="p2.jpg" alt="Ja Mosha Box Pack"/>
+        <h3>P2 – Box Pack</h3>
+        <p>Premium box with natural mosquito protection. Safe for all, indoor/outdoor use.</p>
+        <p class="price">₹30 | 30 Sticks</p>
+        <a href="https://wa.me/918439021253?text=I%20want%20to%20order%20P2%20Ja%20Mosha%20Agarbatti" class="btn">Order P2</a>
+      </div>
+    </div>
 
-<div class="section" data-aos="fade-up">
-  <h2 data-i18n="usage_title">उपयोग की विधि</h2>
-  <p data-i18n="usage_text">अगरबत्ती को आग लगा कर कमरे के कोने में सुरक्षित स्थान पर रखें। बच्चों की पहुँच से दूर रखें।</p>
-</div>
-
-<div class="section" data-aos="fade-up">
-  <h2 data-i18n="warn_title">सावधानियाँ</h2>
-  <p data-i18n="warn_text">ज्वलनशील पदार्थों से दूर रखें। इस्तेमाल के दौरान सावधानी बरतें।</p>
-</div>
-
-<div class="section" data-aos="fade-up">
-  <h2 data-i18n="content_title">सामग्री</h2>
-  <p data-i18n="content_text">नीम, तुलसी, लेमनग्रास, यूकेलिप्टस, प्राकृतिक जड़ी-बूटियाँ</p>
-</div>
-
-<div class="section" data-aos="fade-up">
-  <h2 data-i18n="buy_title">अब खरीदें</h2>
-  <p data-i18n="buy_text">अब यह Flipkart, Amazon और JioMart पर उपलब्ध है।</p>
-</div>
-
-<div class="testimonial" data-aos="fade-up">
-  “Best mosquito repellent! Very effective and smells great.”<br>
-  <small>- Ramesh, Bengaluru</small>
-</div>
-
-<div class="section" data-aos="fade-up">
-  <h2 data-i18n="address_title">पता</h2>
-  <p>35, Guttahalli, Dattatreya Temple Street, Palace Guttahalli Main Road, 8th Cross, Malleshwaram, DNR Layout, Palace Guttahalli, Bengaluru, Karnataka 560003, India</p>
-</div>
-
-<div class="section" data-aos="fade-up">
-  <h2 data-i18n="contact_title">Contact</h2>
-  <p><i class="fas fa-phone"></i> Coming Soon...</p>
-</div>
-
-<div class="footer">
-  Made with love in India | <i class="fas fa-leaf"></i> Natural & Effective
-</div>
-
-  </div>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>AOS.init();</script>  <script>
-    const translations = {
-      en: {
-        title: "JA MOSHA AGARBATTI",
-        subtitle: "100% Natural Mosquito Repellent Incense Sticks",
-        order: "Order Now on WhatsApp",
-        usage_title: "Usage",
-        usage_text: "Light the incense and place it safely in a corner. Keep away from children.",
-        warn_title: "Precautions",
-        warn_text: "Keep away from flammable items. Use with caution.",
-        content_title: "Ingredients",
-        content_text: "Neem, Tulsi, Lemongrass, Eucalyptus, Natural Herbs",
-        buy_title: "Available On",
-        buy_text: "Now available on Flipkart, Amazon & JioMart.",
-        address_title: "Address",
-        contact_title: "Contact"
-      },
-      hi: {
-        title: "जा मोशा अगरबत्ती",
-        subtitle: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
-        order: "व्हाट्सएप पर अभी ऑर्डर करें",
-        usage_title: "उपयोग की विधि",
-        usage_text: "अगरबत्ती को आग लगा कर कमरे के कोने में सुरक्षित स्थान पर रखें। बच्चों की पहुँच से दूर रखें।",
-        warn_title: "सावधानियाँ",
-        warn_text: "ज्वलनशील पदार्थों से दूर रखें। इस्तेमाल के दौरान सावधानी बरतें।",
-        content_title: "सामग्री",
-        content_text: "नीम, तुलसी, लेमनग्रास, यूकेलिप्टस, प्राकृतिक जड़ी-बूटियाँ",
-        buy_title: "अब खरीदें",
-        buy_text: "अब यह Flipkart, Amazon और JioMart पर उपलब्ध है।",
-        address_title: "पता",
-        contact_title: "संपर्क करें"
-      },
-      bn: {
-        title: "জা মোশা আগরবাত্তি",
-        subtitle: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাত্তি",
-        order: "হোয়াটসঅ্যাপে এখনই অর্ডার করুন",
-        usage_title: "ব্যবহার পদ্ধতি",
-        usage_text: "আগরবাত্তিতে আগুন দিয়ে ঘরের কোণে নিরাপদ জায়গায় রাখুন। শিশুদের থেকে দূরে রাখুন।",
-        warn_title: "সতর্কতা",
-        warn_text: "দাহ্য বস্তু থেকে দূরে রাখুন। ব্যবহারে সতর্ক থাকুন।",
-        content_title: "উপাদান",
-        content_text: "নিম, তুলসী, লেমনগ্রাস, ইউক্যালিপটাস, প্রাকৃতিক ভেষজ",
-        buy_title: "এখন কিনুন",
-        buy_text: "এখন Flipkart, Amazon এবং JioMart-এ উপলব্ধ।",
-        address_title: "ঠিকানা",
-        contact_title: "যোগাযোগ"
-      },
-      kn: {
-        title: "ಜಾ ಮೋಷಾ ಅಗರಬತ್ತಿ",
-        subtitle: "100% ನೈಸರ್ಗಿಕ ಕಚ್ಚೆಕುರಿ ತಡೆಯುವ ಅಗರಬತ್ತಿ",
-        order: "ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಈಗ آرಡರ್ ಮಾಡಿ",
-        usage_title: "ಬಳಕೆಯ ವಿಧಾನ",
-        usage_text: "ಅಗರಬತ್ತಿಗೆ ಬೆಂಕಿ ಹಚ್ಚಿ ಕೋಣೆಯ ಕೋನದಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಇಡಿ. ಮಕ್ಕಳಿಂದ ದೂರವಿಡಿ.",
-        warn_title: "ಜಾಗರೂಕತೆ",
-        warn_text: "ಬೆಂಕಿಗೆ ಓಡೋ ವಸ್ತುಗಳಿಂದ ದೂರವಿಡಿ. ಬಳಸುವಾಗ ಎಚ್ಚರಿಕೆ ವಹಿಸಿ.",
-        content_title: "ಸಾಮಗ್ರಿಗಳು",
-        content_text: "ನೀಂ, ತುಳಸಿ, ಲೆಮನ್‌ಗ್ರಾಸ್, ಯೂಕಲಿಪ್ಟಸ್, ನೈಸರ್ಗಿಕ ಔಷಧಿ ಗಿಡಗಳು",
-        buy_title: "ಇದೀಗ ಖರೀದಿಸಿ",
-        buy_text: "ಇದೀಗ Flipkart, Amazon ಮತ್ತು JioMart ನಲ್ಲಿ ಲಭ್ಯವಿದೆ.",
-        address_title: "ವಿಳಾಸ",
-        contact_title: "ಸಂಪರ್ಕ"
-      }
-    };
-
-    function setLang(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-    }
-  </script></body>
+    <div class="footer">
+      Made with love in India | Contact: 8439021253
+    </div>
+  </div>
+</body>
 </html>

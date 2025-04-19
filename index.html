@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ja Mosha Agarbatti</title>
+  <title>JA MOSHA AGARBATTI</title>
   <style>
     body {
       margin: 0;
@@ -13,182 +14,236 @@
       color: white;
       text-align: center;
       overflow-x: hidden;
-    }.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
-  padding: 40px 20px;
-}
+    }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 0.2em;
-  animation: fadeInDown 1.5s ease-out;
-}
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
 
-h2 {
-  margin: 0.2em 0;
-  font-weight: normal;
-  animation: fadeInUp 2s ease-out;
-}
+    .welcome {
+      animation: fadeZoom 2s ease-out;
+      margin-bottom: 20px;
+    }
 
-.product {
-  margin-top: 40px;
-  animation: fadeIn 2s ease-out;
-}
+    @keyframes fadeZoom {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
 
-.product img {
-  width: 250px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
+    .welcome h1 {
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
 
-.price {
-  font-size: 1.3em;
-  margin-top: 10px;
-}
+    h2 {
+      margin: 0.2em 0;
+      font-weight: normal;
+    }
 
-.btn {
-  margin-top: 30px;
-  padding: 15px 30px;
-  font-size: 1.1em;
-  background: #ff9800;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  animation: bounceIn 2s ease;
-}
+    .product {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
 
-.btn:hover {
-  background: #e68900;
-}
+    .product-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      width: 250px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
 
-.footer {
-  margin-top: 60px;
-  font-size: 0.9em;
-  color: #ccc;
-}
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-/* Animation Keyframes */
-@keyframes fadeInDown {
-  0% {opacity: 0; transform: translateY(-40px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
 
-@keyframes fadeInUp {
-  0% {opacity: 0; transform: translateY(40px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
+    .price {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
 
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
+    .btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-@keyframes bounceIn {
-  0% {transform: scale(0.5); opacity: 0;}
-  100% {transform: scale(1); opacity: 1;}
-}
+    .btn:hover {
+      background: #e68900;
+    }
 
-/* Agarbatti Animation */
-.incense-container {
-  position: relative;
-  margin: 60px auto;
-  width: 20px;
-  height: 120px;
-}
+    .footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
 
-.stick {
-  width: 6px;
-  height: 100px;
-  background-color: brown;
-  margin: auto;
-  border-radius: 3px;
-}
+    .mosquito {
+      width: 30px;
+      position: absolute;
+      animation: fall 4s infinite;
+    }
 
-.smoke {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  width: 20px;
-  height: 60px;
-  background: radial-gradient(ellipse at center, rgba(255,255,255,0.3), transparent);
-  animation: rise 3s infinite ease-in-out;
-  opacity: 0.6;
-  transform: translateX(-50%);
-}
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(120vh) rotate(360deg); }
+    }
 
-@keyframes rise {
-  0% { transform: translateX(-50%) translateY(0) scale(1); opacity: 0.6; }
-  100% { transform: translateX(-50%) translateY(-100px) scale(1.2); opacity: 0; }
-}
+    .agarbatti-smoke {
+      width: 20px;
+      height: 100px;
+      background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(255,255,255,0));
+      position: relative;
+      margin: 0 auto;
+      animation: smoke 2s infinite alternate;
+      border-radius: 10px;
+    }
 
-.mosquito {
-  font-size: 30px;
-  position: fixed;
-  top: -40px;
-  animation: fall 6s linear infinite;
-}
+    @keyframes smoke {
+      0% { transform: translateY(0); opacity: 0.4; }
+      100% { transform: translateY(-20px); opacity: 1; }
+    }
 
-@keyframes fall {
-  0% { top: -40px; opacity: 1; }
-  80% { transform: rotate(90deg); }
-  100% { top: 110%; opacity: 0; }
-}
+    .lang-switcher {
+      margin-top: 20px;
+    }
 
-.mosquito:nth-child(1) { left: 10%; animation-delay: 0s; }
-.mosquito:nth-child(2) { left: 20%; animation-delay: 1s; }
-.mosquito:nth-child(3) { left: 30%; animation-delay: 2s; }
-.mosquito:nth-child(4) { left: 40%; animation-delay: 3s; }
-.mosquito:nth-child(5) { left: 50%; animation-delay: 1.5s; }
-.mosquito:nth-child(6) { left: 60%; animation-delay: 2.5s; }
-.mosquito:nth-child(7) { left: 70%; animation-delay: 0.5s; }
-.mosquito:nth-child(8) { left: 80%; animation-delay: 3.5s; }
-.mosquito:nth-child(9) { left: 90%; animation-delay: 1.2s; }
-.mosquito:nth-child(10) { left: 95%; animation-delay: 2.8s; }
+    .lang-switcher button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .availability {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #ffd700;
+    }
 
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>JA MOSHA AGARBATTI</h1>
-    <h2>100% Natural Mosquito Repellent Incense Sticks</h2><div class="product">
-  <img src="p2.png" alt="P2 Product" />
-  <p class="price">P2 | ₹10 | 12 Sticks</p>
-</div>
+    <div class="welcome">
+      <h1>Welcome to JA MOSHA AGARBATTI</h1>
+    </div>
 
-<div class="product">
-  <img src="p1.png" alt="P1 Product" />
-  <p class="price">P1 | ₹10 | 12 Sticks</p>
-</div>
+    <img src="logo.png" alt="Ja Mosha Logo" width="80" />
+    <h2 id="tagline">100% Natural Mosquito Repellent Incense Sticks</h2>
 
-<a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
+    <div class="lang-switcher">
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('hi')">हिंदी</button>
+      <button onclick="setLang('bn')">বাংলা</button>
+      <button onclick="setLang('kn')">ಕನ್ನಡ</button>
+    </div>
 
-<p style="margin-top: 20px; font-size: 1em;">Available on Flipkart, Amazon</p>
+    <div class="product">
+      <div class="product-card">
+        <img src="p2.png" alt="P2 Product">
+        <h3 id="p2name">P2 Agarbatti</h3>
+        <p id="p2desc">Herbal blend to naturally repel mosquitoes and purify your surroundings.</p>
+        <p class="price">₹10 | 12 Sticks</p>
+        <div class="agarbatti-smoke"></div>
+      </div>
+      <div class="product-card">
+        <img src="p1.png" alt="P1 Product">
+        <h3 id="p1name">P1 Agarbatti</h3>
+        <p id="p1desc">Crafted with essential oils to provide a calm, mosquito-free environment.</p>
+        <p class="price">₹10 | 12 Sticks</p>
+      </div>
+    </div>
 
-<div class="incense-container">
-  <div class="stick"></div>
-  <div class="smoke"></div>
-</div>
+    <div class="availability" id="availableText">
+      Also Available on Flipkart, Amazon
+    </div>
 
-<!-- Multiple Mosquito Animation -->
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
-<div class="mosquito">🦟</div>
+    <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
 
-<div class="footer">
-  Made with love in India | Contact: 8439021253
-</div>
+    <div class="footer">
+      Usage: Light the stick like regular incense. Keep away from flammable items.<br>
+      सावधानी: बच्चों की पहुँच से दूर रखें। <br>
+      सामग्री: लेमनग्रास तेल, नीम, तुलसी, प्राकृतिक हर्ब्स <br>
+      पता: 35, Guttahalli, Dattatreya Temple Street, Bengaluru - 560003 <br><br>
+      Contact: Coming soon...<br>
+      Made with love in India
+    </div>
 
+    <!-- Mosquito Animation -->
+    <script>
+      for (let i = 0; i < 12; i++) {
+        const mosquito = document.createElement('img');
+        mosquito.src = "https://i.ibb.co/3TWg6Xg/mosquito.png"; // Replace with your mosquito image link if you have
+        mosquito.className = "mosquito";
+        mosquito.style.left = Math.random() * 100 + "vw";
+        mosquito.style.animationDuration = (3 + Math.random() * 2) + "s";
+        document.body.appendChild(mosquito);
+      }
+
+      function setLang(lang) {
+        const text = {
+          en: {
+            tagline: "100% Natural Mosquito Repellent Incense Sticks",
+            p1name: "P1 Agarbatti",
+            p2name: "P2 Agarbatti",
+            p1desc: "Crafted with essential oils to provide a calm, mosquito-free environment.",
+            p2desc: "Herbal blend to naturally repel mosquitoes and purify your surroundings.",
+            availableText: "Also Available on Flipkart, Amazon"
+          },
+          hi: {
+            tagline: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
+            p1name: "पी1 अगरबत्ती",
+            p2name: "पी2 अगरबत्ती",
+            p1desc: "आवश्यक तेलों से तैयार की गई, शांत वातावरण और मच्छरों से राहत दिलाए।",
+            p2desc: "हर्बल मिश्रण जो मच्छरों को भगाए और वातावरण को शुद्ध करे।",
+            availableText: "फ्लिपकार्ट, अमेज़न पर भी उपलब्ध"
+          },
+          bn: {
+            tagline: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাতি",
+            p1name: "পি১ আগরবাতি",
+            p2name: "পি২ আগরবাতি",
+            p1desc: "এসেনশিয়াল অয়েল দিয়ে তৈরি, মশা-মুক্ত শান্ত পরিবেশ দেয়।",
+            p2desc: "হার্বাল মিশ্রণ যা মশা তাড়ায় এবং বাতাস পরিষ্কার রাখে।",
+            availableText: "ফ্লিপকার্ট, অ্যামাজনে পাওয়া যায়"
+          },
+          kn: {
+            tagline: "100% ನೈಸರ್ಗಿಕ ಕೊಳ್ಳೆಹಾಕುವ ಧೂಪದ ಕಡ್ಡಿ",
+            p1name: "ಪಿ1 ಧೂಪಕಡ್ಡಿ",
+            p2name: "ಪಿ2 ಧೂಪಕಡ್ಡಿ",
+            p1desc: "ಅಗತ್ಯದ ಎಣ್ಣೆಯಿಂದ ತಯಾರಾದದ್ದು, ಮಚ್ಛರರಹಿತ ಶಾಂತತೆಯನ್ನ ನೀಡುತ್ತದೆ.",
+            p2desc: "ಹೆರ್ಬಲ್ ಮಿಶ್ರಣ ಮಚ್ಛರಗಳನ್ನು ತೊಡೆಯುತ್ತದೆ ಮತ್ತು ಪರಿಸರವನ್ನು ಶುದ್ಧೀಕರಿಸುತ್ತದೆ.",
+            availableText: "Flipkart, Amazon ನಲ್ಲಿ ಲಭ್ಯವಿದೆ"
+          }
+        };
+
+        document.getElementById("tagline").innerText = text[lang].tagline;
+        document.getElementById("p1name").innerText = text[lang].p1name;
+        document.getElementById("p2name").innerText = text[lang].p2name;
+        document.getElementById("p1desc").innerText = text[lang].p1desc;
+        document.getElementById("p2desc").innerText = text[lang].p2desc;
+        document.getElementById("availableText").innerText = text[lang].availableText;
+      }
+    </script>
   </div>
 </body>
 </html>

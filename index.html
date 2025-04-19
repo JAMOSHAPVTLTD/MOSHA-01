@@ -14,6 +14,7 @@
       color: white;
       text-align: center;
       overflow-x: hidden;
+      position: relative;
     }
 
     .overlay {
@@ -100,27 +101,11 @@
       position: absolute;
       font-size: 24px;
       animation: fall 4s linear infinite;
-      z-index: 999;
     }
 
     @keyframes fall {
-      0% { transform: translateY(-50px); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
-
-    .agarbatti-smoke {
-      width: 20px;
-      height: 100px;
-      background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(255,255,255,0));
-      position: relative;
-      margin: 0 auto;
-      animation: smoke 2s infinite alternate;
-      border-radius: 10px;
-    }
-
-    @keyframes smoke {
-      0% { transform: translateY(0); opacity: 0.4; }
-      100% { transform: translateY(-20px); opacity: 1; }
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
     }
 
     .lang-switcher {
@@ -140,6 +125,50 @@
       font-size: 1.1em;
       color: #ffd700;
     }
+
+    .faq {
+      margin-top: 50px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq h3 {
+      text-align: center;
+      color: #ffeb3b;
+    }
+
+    .faq p {
+      margin: 10px 0;
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badges img {
+      height: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      padding: 10px 16px;
+      font-size: 18px;
+      text-decoration: none;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
   </style>
 </head>
 <body>
@@ -164,7 +193,6 @@
         <h3 id="p2name">P2 Agarbatti</h3>
         <p id="p2desc">Herbal blend to naturally repel mosquitoes and purify your surroundings.</p>
         <p class="price">₹10 | 12 Sticks</p>
-        <div class="agarbatti-smoke"></div>
       </div>
       <div class="product-card">
         <img src="p1.png" alt="P1 Product">
@@ -180,6 +208,19 @@
 
     <a href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" class="btn">Order Now on WhatsApp</a>
 
+    <div class="trust-badges">
+      <img src="https://i.ibb.co/JFf7bZh/natural.png" alt="100% Natural" />
+      <img src="https://i.ibb.co/Nsck7Zm/madeinindia.png" alt="Made in India" />
+      <img src="https://i.ibb.co/PYD8tgZ/eco.png" alt="Eco Friendly" />
+    </div>
+
+    <div class="faq">
+      <h3>FAQs</h3>
+      <p><strong>Q: How to use the agarbatti?</strong><br>A: Light it like a regular incense stick and place it in a ventilated area.</p>
+      <p><strong>Q: How many sticks in one pack?</strong><br>A: Each pack contains 12 sticks.</p>
+      <p><strong>Q: Is it safe for kids?</strong><br>A: Yes, but keep it away from their reach while burning.</p>
+    </div>
+
     <div class="footer">
       Usage: Light the stick like regular incense. Keep away from flammable items.<br>
       सावधानी: बच्चों की पहुँच से दूर रखें। <br>
@@ -188,63 +229,64 @@
       Contact: Coming soon...<br>
       Made with love in India
     </div>
-
-    <!-- Emoji Mosquito Animation -->
-    <script>
-      for (let i = 0; i < 12; i++) {
-        const mosquito = document.createElement('div');
-        mosquito.className = 'mosquito';
-        mosquito.textContent = '🦟';
-        mosquito.style.left = Math.random() * 100 + 'vw';
-        mosquito.style.animationDuration = (3 + Math.random() * 2) + 's';
-        mosquito.style.top = '-50px';
-        document.body.appendChild(mosquito);
-      }
-
-      function setLang(lang) {
-        const text = {
-          en: {
-            tagline: "100% Natural Mosquito Repellent Incense Sticks",
-            p1name: "P1 Agarbatti",
-            p2name: "P2 Agarbatti",
-            p1desc: "Crafted with essential oils to provide a calm, mosquito-free environment.",
-            p2desc: "Herbal blend to naturally repel mosquitoes and purify your surroundings.",
-            availableText: "Also Available on Flipkart, Amazon"
-          },
-          hi: {
-            tagline: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
-            p1name: "पी1 अगरबत्ती",
-            p2name: "पी2 अगरबत्ती",
-            p1desc: "आवश्यक तेलों से तैयार की गई, शांत वातावरण और मच्छरों से राहत दिलाए।",
-            p2desc: "हर्बल मिश्रण जो मच्छरों को भगाए और वातावरण को शुद्ध करे।",
-            availableText: "फ्लिपकार्ट, अमेज़न पर भी उपलब्ध"
-          },
-          bn: {
-            tagline: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাতি",
-            p1name: "পি১ আগরবাতি",
-            p2name: "পি২ আগরবাতি",
-            p1desc: "এসেনশিয়াল অয়েল দিয়ে তৈরি, মশা-মুক্ত শান্ত পরিবেশ দেয়।",
-            p2desc: "হার্বাল মিশ্রণ যা মশা তাড়ায় এবং বাতাস পরিষ্কার রাখে।",
-            availableText: "ফ্লিপকার্ট, অ্যামাজনে পাওয়া যায়"
-          },
-          kn: {
-            tagline: "100% ನೈಸರ್ಗಿಕ ಕೊಳ್ಳೆಹಾಕುವ ಧೂಪದ ಕಡ್ಡಿ",
-            p1name: "ಪಿ1 ಧೂಪಕಡ್ಡಿ",
-            p2name: "ಪಿ2 ಧೂಪಕಡ್ಡಿ",
-            p1desc: "ಅಗತ್ಯದ ಎಣ್ಣೆಯಿಂದ ತಯಾರಾದದ್ದು, ಮಚ್ಛರರಹಿತ ಶಾಂತತೆಯನ್ನ ನೀಡುತ್ತದೆ.",
-            p2desc: "ಹೆರ್ಬಲ್ ಮಿಶ್ರಣ ಮಚ್ಛರಗಳನ್ನು ತೊಡೆಯುತ್ತದೆ ಮತ್ತು ಪರಿಸರವನ್ನು ಶುದ್ಧೀಕರಿಸುತ್ತದೆ.",
-            availableText: "Flipkart, Amazon ನಲ್ಲಿ ಲಭ್ಯವಿದೆ"
-          }
-        };
-
-        document.getElementById("tagline").innerText = text[lang].tagline;
-        document.getElementById("p1name").innerText = text[lang].p1name;
-        document.getElementById("p2name").innerText = text[lang].p2name;
-        document.getElementById("p1desc").innerText = text[lang].p1desc;
-        document.getElementById("p2desc").innerText = text[lang].p2desc;
-        document.getElementById("availableText").innerText = text[lang].availableText;
-      }
-    </script>
   </div>
+
+  <a class="whatsapp-float" href="https://wa.me/918439021253?text=Hi!%20I%20want%20to%20order%20Ja%20Mosha%20Agarbatti" target="_blank">Chat on WhatsApp</a>
+
+  <!-- Falling 🦟 emoji animation -->
+  <script>
+    for (let i = 0; i < 12; i++) {
+      const mosquito = document.createElement('div');
+      mosquito.className = 'mosquito';
+      mosquito.textContent = '🦟';
+      mosquito.style.left = Math.random() * 100 + 'vw';
+      mosquito.style.animationDuration = (3 + Math.random() * 2) + 's';
+      document.body.appendChild(mosquito);
+    }
+
+    function setLang(lang) {
+      const text = {
+        en: {
+          tagline: "100% Natural Mosquito Repellent Incense Sticks",
+          p1name: "P1 Agarbatti",
+          p2name: "P2 Agarbatti",
+          p1desc: "Crafted with essential oils to provide a calm, mosquito-free environment.",
+          p2desc: "Herbal blend to naturally repel mosquitoes and purify your surroundings.",
+          availableText: "Also Available on Flipkart, Amazon"
+        },
+        hi: {
+          tagline: "100% प्राकृतिक मच्छर भगाने वाली अगरबत्ती",
+          p1name: "पी1 अगरबत्ती",
+          p2name: "पी2 अगरबत्ती",
+          p1desc: "आवश्यक तेलों से तैयार की गई, शांत वातावरण और मच्छरों से राहत दिलाए।",
+          p2desc: "हर्बल मिश्रण जो मच्छरों को भगाए और वातावरण को शुद्ध करे।",
+          availableText: "फ्लिपकार्ट, अमेज़न पर भी उपलब्ध"
+        },
+        bn: {
+          tagline: "১০০% প্রাকৃতিক মশা তাড়ানোর আগরবাতি",
+          p1name: "পি১ আগরবাতি",
+          p2name: "পি২ আগরবাতি",
+          p1desc: "এসেনশিয়াল অয়েল দিয়ে তৈরি, মশা-মুক্ত শান্ত পরিবেশ দেয়।",
+          p2desc: "হার্বাল মিশ্রণ যা মশা তাড়ায় এবং বাতাস পরিষ্কার রাখে।",
+          availableText: "ফ্লিপকার্ট, অ্যামাজনে পাওয়া যায়"
+        },
+        kn: {
+          tagline: "100% ನೈಸರ್ಗಿಕ ಕೊಳ್ಳೆಹಾಕುವ ಧೂಪದ ಕಡ್ಡಿ",
+          p1name: "ಪಿ1 ಧೂಪಕಡ್ಡಿ",
+          p2name: "ಪಿ2 ಧೂಪಕಡ್ಡಿ",
+          p1desc: "ಅಗತ್ಯದ ಎಣ್ಣೆಯಿಂದ ತಯಾರಾದದ್ದು, ಮಚ್ಛರರಹಿತ ಶಾಂತತೆಯನ್ನ ನೀಡುತ್ತದೆ.",
+          p2desc: "ಹೆರ್ಬಲ್ ಮಿಶ್ರಣ ಮಚ್ಛರಗಳನ್ನು ತೊಡೆಯುತ್ತದೆ ಮತ್ತು ಪರಿಸರವನ್ನು ಶುದ್ಧೀಕರಿಸುತ್ತದೆ.",
+          availableText: "Flipkart, Amazon ನಲ್ಲಿ ಲಭ್ಯವಿದೆ"
+        }
+      };
+
+      document.getElementById("tagline").innerText = text[lang].tagline;
+      document.getElementById("p1name").innerText = text[lang].p1name;
+      document.getElementById("p2name").innerText = text[lang].p2name;
+      document.getElementById("p1desc").innerText = text[lang].p1desc;
+      document.getElementById("p2desc").innerText = text[lang].p2desc;
+      document.getElementById("availableText").innerText = text[lang].availableText;
+    }
+  </script>
 </body>
 </html>
